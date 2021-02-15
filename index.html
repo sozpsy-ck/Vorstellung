@@ -1,0 +1,242 @@
+<html lang="en"><!DOCTYPE html>
+
+ <!-- 
+/* 
+  
+This document contains all instructions which appear in the paradigm, along with some basic functionality. You can change all text by following the instructions below. 
+
+If you don't have experience with programming, it is important that you alter only the plain text, as indicated in the instructions, and leave any functional elements intact.
+*/ 
+--> 
+
+<meta charset="utf-8">
+<title>Intro</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Stylesheets -->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.core.css" rel="stylesheet">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.default.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+<!-- For IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+  </script>
+<![endif]-->
+
+<!-- Javascript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.3.0/mustache.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+<script src="shortcut.js"></script>
+<script src="main.js"></script>
+<script type="text/javascript" src="profiles.json"></script>
+
+</head>
+
+<body oncontextmenu="return false;">
+<div class="container">
+
+
+
+<div id="intro" style="display:none;" class="instr">
+ <!-- 
+/* 
+  
+**Intro**
+---------
+You can edit this text using basic HTML elements for styling (e.g., <br>, <h3>).
+
+*/ 
+--> <h3>Herzlich willkommen zur Studie!</h3>
+
+  Sie werden eine Reihe von Aufgaben erledigen, zusammen mit anderen Leuten, <br>
+  mit denen Sie über das Internet verbunden sein werden. 
+  <br><br>
+  Als erstes werden alle Teilnehmer der Studie persönliche "Avatare" auswählen und<br>
+  kurze Texte schreiben, um sich vorzustellen.
+  <br><br>
+  Bevor Sie mit der Aufgabe beginnen, werden Sie 3 Minuten mit den anderen Leuten verbringen<br>
+  Während dieser Zeit, werden Sie in der Lage sein gegenseitig ihre Profile zu lesen und auf <br>
+  die Kurzvorstellungen zu reagieren.
+  <br><br>
+  Genauere Anweisungen folgen.<br><br>
+  <b>Vielen Dank!</b><br><br>
+  <button type="submit" id="submit_intro">Weiter</button>
+</div>
+
+
+
+<div id="name" style="display:none;" class="instr">
+<!-- 
+/* 
+  
+**Username**
+---------
+You can edit the instructions text for entering usernames below.
+
+*/ 
+-->
+	<h3>Bitte geben Sie ihren Namen ein</h3>
+	Es könnte ihr Vorname, ein Spitzname, oder Initialien verwendet werden<br><br>
+	
+	<input type="text" id="username"  autocomplete="off" /><br>	<br>
+	<button type="submit"  id="submit_username">Bestätigen</button>
+</div>
+
+
+
+<div id="avatar" style="display:none;">	
+<!-- 
+/* 
+  
+**Avatar choice**
+---------
+You can edit the instructions text. The text "Your choice of avatar will not be recorded or analyzed" depends on whether you record the choice of avatar.
+
+*/ 
+-->	<h3>Bitte wählen Sie eineen Avatar</h3>
+	Der Avatar wird Sie während der Gruppenaufgabe repräsentieren, wird jedoch nicht mit Ihren antworten in Verbindung gebracht werden. <br>Die Wahl ihres Avatars wird nicht festgehalten oder analysiert.
+	<br><br>
+	<div class="avatars"></div>
+	<br><button type="submit"  id="submit_avatar">Bestätigen</button>
+	<br><br>
+</div>	
+
+
+<div id="text" style="display:none;" class="instr">	
+<!-- 
+/* 
+  
+**Description entry**
+---------
+You can edit the instructions text. 
+
+*/ 
+-->	<h3>Bitte stellen Sie sich vor </h3>
+	Schreiben Sie einen Absatz, um sich dem Rest der Gruppe vorzustellen. <br>
+	Schreibe etwas, das du gerne über dich erzählen möchtest - alles was du gerne teilen möchtest.
+	<br><br>	
+	<textarea id="description" autocomplete="off" /></textarea><br>
+	<span id="count">Verbleibende Zeichen: 400</span><br><br>
+	<button type="submit" id="submit_text">Bestätigen</button>
+</div>	
+
+
+
+<div id="fb_intro" style="display:none;" class="instr">
+<!-- 
+/* 
+  
+**Task instructions**
+---------
+You can edit the instructions text. The prompt to try and form an impression of the other players is recommended in all ostacism paradigms. Defining the action of "liking" is also recommended. The information regarding task duration can be adjusted to match the actual duration you have set.
+
+*/ 
+-->  <h3>Gruppenvorstellung</h3>
+  Nach dem Verbinden solltest du in der Lage sein die Profile der anderen Leute zu sehen. <br>
+  Du kannst auf die kurze Beschreibung, die sie über sich verfasst haben, lesen und darauf reagieren, indem du <br>
+  auf einen "Like"-Button klickst, ähnlich wie ein "Like"-Button bei Facebook ("favorite" auf Twitter,<br> 
+  &hearts; bei Tumblr und Instagram, etc.) <br>
+  <br>
+  Obwohl eure Interaktion minimal ist, versuche bitte dir bitte einen Eindruck zu den Leuten<br>
+  in der Gruppe zu bilden. Versuche sie dir im echten Leben vorzustellen - wie sie vielleicht aussehen<br>
+  oder klingen, was für Leute sie sind, wie du dich mit ihnen verstehen würdest.
+  <br><br>Die Aufgabe wird 3 Minuten dauern und ist für die Studie sehr wichtig, also sein Sie bitte aufmerksam,
+  <br>ohne das Fenster zu wechseln, oder sonstige Aufgaben außerhalb dieser zu verfolgen.Fragen über die anderen Leute<br>folgen möglicherweise.
+  <br><br><b>Wenn Sie die Anweisungen verstanden haben, können Sie fortfahren und sich einloggen.</b><br>
+  <br>
+  <button type="submit"  id="submit_fb_intro">Einloggen</button>
+</div>
+
+
+
+<div id="fb_login" style="display:none;" class="instr">
+  <h3>Verbindung wird hergestellt</h3>
+  Bitte warten Sie, während Sie mit den anderen Teilnehmern in Ihrer Gruppe verbunden werden.<br><br>
+  <img class="load" src='ajax-loader.gif' id="loader">
+  <div id="msg_all_done" style="display:none;">
+  <br>
+  	<b>Es sind jetzt alle Teilnehmer verbunden und Sie können fortfahren.</b><br><br>
+  	<button type="submit"  id="submit_fb_login">Fortfahren</button>
+  </div>
+</div>
+
+
+<!-- 
+/* 
+  
+**In-task instructions and timer**
+---------
+You can edit the instructions text. 
+
+*/ 
+-->
+<div id="task" style="display:none;">
+	<div id="countdown"><span class="secs" style="display: none;"></span>Sie können "Like" klicken, falls Ihnen die Vorstellung einer Person gefallen hat<br><br>Verbleibende Zeit:<br><span id="timer" class="cntr label label-info"></span>
+	<br>
+	<button type="submit" id='final-continue' style="display:none;">Fortfahren</button>	
+	</div>
+</div>
+
+
+<script type="template/text" id="usertmp">
+  {{#posts}}
+    
+    <div class="entry">
+    <div class="tophalf">
+
+    	<img src="{{avatar}}" class="avatar">
+    	<h3>{{username}}</h3>
+
+    	<div class="main">
+    		<p>{{text}}</p>
+    	</div>
+
+    	<br style="clear:both;">
+
+    </div>	
+
+    <div class="bottomhalf">
+    	Likes <span class="badge badge-custom userslikes" data-likes="{{likes}}" data-usernames="{{usernames}}">0</span>
+    </div>
+    </div>
+
+  {{/posts}}  
+</script>
+
+
+<script type="template/text" id="otherstmp">
+  {{#posts}}
+    <div class="entry">
+    <div class="tophalf">
+
+    	<img src="{{avatar}}" class="avatar">
+        <h3>{{username}}</h3>
+    	
+    	<div class="main">
+    		
+    		<p>{{text}}</p>
+    	</div>
+
+    	<br style="clear:both;">
+
+    </div>	
+
+    <div class="bottomhalf">
+    	Likes <span class="badge badge-custom otherslikes" data-likes="{{likes}}">0</span>
+    	<button type="submit" class="btn pull-right btn-like btn-custom btn-deround">Like <i class="icon-thumbs-up icon-white"></i></button>
+    </div>
+
+    </div>
+  {{/posts}}  
+</script>
+
+
+</body>
+</html>
