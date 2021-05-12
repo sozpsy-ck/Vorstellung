@@ -15,7 +15,7 @@ $(function() {
 	// Number of avatars the user can choose from. Can be changed to any number, depending on how many avatars you would like to display. Default: 82
 	// The avatar images used in the online preview of the paradigm were created using by pickaface.net and due to their terms not available for redistribution. You should therefore create your own images. All images should be 250x250 pixels in size and carry the names "avatar_NUMBER.png" (e.g. avatar_1.png; "png" should be lower case; the numbers in the names should be consequtive, starting from 1). The number of avatars dependeds on the corresponding parameter. The images should be placed in folder "avatars," located in the main study folder extracted on your computer or server.
 
-    settings.numberofavatars = 10;
+    settings.numberofavatars = 82;
 
 	
     // **Redirection**    
@@ -31,7 +31,7 @@ $(function() {
     settings.tasklength = 180000; 
 
 	
-	// **Number** **of** **"likes"**    
+	// **Number** **of** **"likes"** - CK: passe es auch hier an, sodass es in jedem Fall Exclusion ist 
     // Each received "like" is indicated by the timepoint (in ms) at which the "like" will appear. To change the number of "likes" in each condition, add or remove timepoints. Make sure that every timepoint (except the first) is preceded by a single comma. 
 	// In cases with only 1 "like," a second "like" is added with time point 9999999. This "like" is added for programming purposes and is never executed, as it is outside the task time
 
@@ -39,16 +39,16 @@ $(function() {
     settings.condition_1_likes = [12000, 9999999]; 
 
     // In condition 2, user will receive 6 likes at the following timepoints (in ms). Default: [10000, 15000,35000,80000,1320000,150000]
-    settings.condition_2_likes = [10000, 15000,35000,80000,1320000,150000];  
+    settings.condition_2_likes = [12000, 9999999];  
     
     // In condition 3, user will receive 9 likes at the following timepoints (in ms). Default: [10000, 11000,15000,35000,80000,100000,110000,150000,20000]
-    settings.condition_3_likes = [10000, 11000,15000,35000,80000,100000,110000,150000,20000]; 
+    settings.condition_3_likes = [12000, 9999999];
 
 	// **Others' likes**     
 	// To keep the total distribution of "likes" constant across conditions, The "likes" received by one group member can be adjusted according to the participant's. By default, the other group member receives 9 "likes" in the participant-ostracism condition, 5 in the participant-inclusion condtion, and 1 in the participant-overinclusion condtion.
 	settings.condition_1_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,20000]; // 9
-	settings.condition_2_adjusted_likes = [12000, 14000,15000,35000,80000]; // 5
-	settings.condition_3_adjusted_likes = [12000, 9999999]; //1	
+	settings.condition_2_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,20000]; // 9
+	settings.condition_3_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,20000]; // 9	
 	
     // Usernames by which the participant will receive "likes"
 	// If group member names are changed, these should be changed accordingly.
